@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxa3k1ka0uu6x"]
 
 [ext_resource type="Script" uid="uid://bs6uti8cdy43y" path="res://Escenas/moneda/moneda.gd" id="1_rqm1n"]
-[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://sprites/tileset_mazmorra.png" id="2_w6rqb"]
+[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://sprites/mago/tileset/tileset_mazmorra.png" id="2_w6rqb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0yqnl"]
 atlas = ExtResource("2_w6rqb")

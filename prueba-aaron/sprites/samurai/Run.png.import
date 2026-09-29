@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dikaop4nchj18"
-path="res://.godot/imported/mago_spritesheet.png-d763f4a6a07b61488452c0850218f8b4.ctex"
+uid="uid://beslojf6phgu6"
+path="res://.godot/imported/Run.png-3f98ba4e68f03d70d4f3a9155ee025ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/mago_spritesheet.png"
-dest_files=["res://.godot/imported/mago_spritesheet.png-d763f4a6a07b61488452c0850218f8b4.ctex"]
+source_file="res://sprites/samurai/Run.png"
+dest_files=["res://.godot/imported/Run.png-3f98ba4e68f03d70d4f3a9155ee025ab.ctex"]
 
 [params]
 

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cxa3k1ka0uu6x" path="res://Escenas/moneda/moneda.tscn" id="4_1i2dy"]
 [ext_resource type="PackedScene" uid="uid://8nhw3kykcqgw" path="res://Escenas/Trampa/trampa.tscn" id="4_hjpyy"]
 [ext_resource type="PackedScene" uid="uid://bcr6bej8g87pu" path="res://Escenas/contenedor_monedas/contenedor_monedas.tscn" id="4_j3yft"]
+[ext_resource type="PackedScene" uid="uid://pgbuckty3rjf" path="res://Escenas/Enemigo/enemigo.tscn" id="7_v2l7u"]
 
 [node name="Prueba_Nivel" type="Node2D" unique_id=1957409361]
 
@@ -34,4 +35,7 @@ position = Vector2(-15, 20)
 position = Vector2(59, 94)
 
 [node name="Personaje" parent="." unique_id=784702786 instance=ExtResource("3_6kg4b")]
-position = Vector2(-188, 93)
+position = Vector2(23, -45)
+
+[node name="Enemigo" parent="." unique_id=13847959 instance=ExtResource("7_v2l7u")]
+position = Vector2(-141, 88)
