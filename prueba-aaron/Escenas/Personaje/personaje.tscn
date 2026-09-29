@@ -29,7 +29,6 @@ position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_lfkbx")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1190670046]
-visible = false
 collision_layer = 0
 collision_mask = 2
 

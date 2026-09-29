@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://beslojf6phgu6" path="res://sprites/samurai/Run.png" id="4_mk8sj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vicex"]
-size = Vector2(26, 50)
+size = Vector2(26, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aui74"]
-size = Vector2(26, 51)
+size = Vector2(31, 51)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xv48k"]
 atlas = ExtResource("1_y5tge")
@@ -120,7 +120,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5o1s4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack",
 "speed": 10.0
 }, {
@@ -183,33 +183,48 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Enemigo" type="CharacterBody2D" unique_id=13847959 node_paths=PackedStringArray("raycast", "raycast2", "animacion")]
-collision_layer = 5
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hdkt6"]
+radius = 23.0
+height = 72.0
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=13847959 node_paths=PackedStringArray("raycast", "animacion", "area_danho", "forma_danho", "area_deteccion")]
 script = ExtResource("1_xv48k")
 raycast = NodePath("RayCast2D")
-raycast2 = NodePath("RayCast2D2")
 animacion = NodePath("AnimatedSprite2D")
+area_danho = NodePath("area_danho")
+forma_danho = NodePath("area_danho/forma_danho")
+area_deteccion = NodePath("area_deteccion")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=22560273]
-position = Vector2(0, -4)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_vicex")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=343676870]
+[node name="area_deteccion" type="Area2D" parent="." unique_id=343676870]
+light_mask = 4
+visibility_layer = 5
+position = Vector2(-14, 1)
+collision_layer = 0
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=412263511]
-position = Vector2(0, -3.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_deteccion" unique_id=412263511]
+position = Vector2(-2.5, -3.5)
 shape = SubResource("RectangleShape2D_aui74")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=16718156]
+position = Vector2(7.6293945e-06, 4)
+scale = Vector2(0.755, 0.765)
 sprite_frames = SubResource("SpriteFrames_aui74")
-animation = &"walk"
-frame_progress = 0.9941955
+animation = &"attack"
 flip_h = true
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1143814942]
-scale = Vector2(0.5, 40)
-target_position = Vector2(-46, 0)
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=407628284]
+target_position = Vector2(-17, 0)
+
+[node name="area_danho" type="Area2D" parent="." unique_id=1238770669]
+position = Vector2(-31, -5)
+collision_layer = 0
 collision_mask = 4
 
-[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=407628284]
-target_position = Vector2(-17, 0)
+[node name="forma_danho" type="CollisionShape2D" parent="area_danho" unique_id=679171455]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_hdkt6")

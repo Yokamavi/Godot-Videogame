@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ds0l6i2yyydbe"]
 
-[ext_resource type="PackedScene" uid="uid://drnuo3acdyomg" path="res://Escenas/Niveles/Nivel1.tscn" id="1_gcge2"]
+[ext_resource type="PackedScene" uid="uid://drnuo3acdyomg" path="res://Escenas/Niveles/prueba_nivel.tscn" id="1_gcge2"]
 [ext_resource type="Script" uid="uid://btcv8mofekbs3" path="res://Escenas/Escena_Principal/escena_principal.gd" id="1_qpsp5"]
 [ext_resource type="PackedScene" uid="uid://bg1phcq2elwyq" path="res://Escenas/Niveles/nivel_2.tscn" id="3_v1ro4"]
 [ext_resource type="PackedScene" uid="uid://dl5dk37ks7a5v" path="res://Escenas/Escena_Final/escena_final.tscn" id="4_m55d6"]

@@ -70,17 +70,17 @@ func _physics_process(delta: float) -> void:
 	
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
-	if not _muerto:
-		animacion.material = material_personaje_rojo
-		_muerto = true
-		animacion.play("muerto")
-		var timer: Timer = Timer.new()
-		add_child(timer)
-		timer.start(0.5)
-		await timer.timeout
-		#await get_tree().create_timer(0.5).timeout
-		personaje_muerto.emit()
+	morir()
 		
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animacion.animation == "muerto":
 		print("PERSONAJE MUERTO. CERRANDO JUEGO...")
+
+func morir() -> void:
+	if _muerto:
+		return
+	animacion.material = material_personaje_rojo
+	_muerto = true
+	animacion.play("muerto")
+	await get_tree().create_timer(0.5).timeout
+	personaje_muerto.emit()

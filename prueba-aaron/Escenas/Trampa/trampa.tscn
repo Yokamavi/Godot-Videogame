@@ -27,6 +27,7 @@ texture = SubResource("AtlasTexture_hdkt6")
 shape = SubResource("RectangleShape2D_kkbeu")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=208574664]
+target_position = Vector2(0, 100)
 collision_mask = 4
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=32951445]
