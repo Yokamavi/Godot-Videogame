@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://wwpkdtks3j7o"]
+
+[ext_resource type="PackedScene" uid="uid://lkfvlaydbaua" path="res://Escenas/Borders/bordes.tscn" id="1_yw1ao"]
+[ext_resource type="PackedScene" uid="uid://bcr6bej8g87pu" path="res://Escenas/contenedor_monedas/contenedor_monedas.tscn" id="2_tj5dq"]
+[ext_resource type="PackedScene" uid="uid://00vmvcr28xxg" path="res://Escenas/Personaje/personaje.tscn" id="3_ghkgf"]
+[ext_resource type="TileSet" uid="uid://dtw7gkj7tvwno" path="res://tile_sets/mazmorra.tres" id="4_navd5"]
+
+[node name="nivel_3" type="Node2D" unique_id=1217389831]
+
+[node name="Bordes" parent="." unique_id=1221269482 instance=ExtResource("1_yw1ao")]
+
+[node name="contenedorMonedas" parent="." unique_id=1218844537 instance=ExtResource("2_tj5dq")]
+
+[node name="Personaje" parent="." unique_id=784702786 instance=ExtResource("3_ghkgf")]
+position = Vector2(-41, 97)
+
+[node name="Nivel" type="TileMapLayer" parent="." unique_id=621944519]
+tile_set = ExtResource("4_navd5")
