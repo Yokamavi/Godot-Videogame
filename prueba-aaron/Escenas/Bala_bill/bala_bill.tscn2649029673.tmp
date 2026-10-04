@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b1bhwnpqxcmp8"]
+
+[ext_resource type="Script" uid="uid://b1dpkeclfu81u" path="res://Escenas/Bala_bill/bala_bill.gd" id="1_gs7d4"]
+[ext_resource type="Texture2D" uid="uid://dn50hmlaex36s" path="res://sprites/pngfind.com-bullet-bill-png-2438226.png" id="1_m210w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfkbx"]
+radius = 20.0
+height = 50.0
+
+[node name="Bala_Bill" type="Area2D" unique_id=2033031927]
+script = ExtResource("1_gs7d4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1533931952]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_lfkbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=418599678]
+scale = Vector2(0.044, 0.05)
+texture = ExtResource("1_m210w")
+flip_h = true

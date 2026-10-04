@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cxa3k1ka0uu6x" path="res://Escenas/moneda/moneda.tscn" id="4_1i2dy"]
 [ext_resource type="PackedScene" uid="uid://8nhw3kykcqgw" path="res://Escenas/Trampa/trampa.tscn" id="4_hjpyy"]
 [ext_resource type="PackedScene" uid="uid://bcr6bej8g87pu" path="res://Escenas/contenedor_monedas/contenedor_monedas.tscn" id="4_j3yft"]
-[ext_resource type="PackedScene" uid="uid://pgbuckty3rjf" path="res://Escenas/Enemigo/enemigo.tscn" id="7_v2l7u"]
+[ext_resource type="PackedScene" uid="uid://pgbuckty3rjf" path="res://Escenas/Enemigos/samurai.tscn" id="7_v2l7u"]
+[ext_resource type="PackedScene" uid="uid://b1bhwnpqxcmp8" path="res://Escenas/Bala_bill/bala_bill.tscn" id="8_heb5a"]
 
 [node name="Prueba_Nivel" type="Node2D" unique_id=1957409361]
 
@@ -48,3 +49,6 @@ position = Vector2(-189, -62)
 
 [node name="Enemigo" parent="." unique_id=13847959 instance=ExtResource("7_v2l7u")]
 position = Vector2(-141, 88)
+
+[node name="Bala_Bill" parent="." unique_id=2033031927 instance=ExtResource("8_heb5a")]
+position = Vector2(1331, 34)

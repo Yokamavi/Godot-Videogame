@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://b0fxfkv65mw88"]
+
+[ext_resource type="Texture2D" uid="uid://b0rgpdrhfrasg" path="res://sprites/Bot Wheel/move without FX.png" id="1_22bmm"]
+[ext_resource type="Script" uid="uid://cio8pme4c58n0" path="res://Escenas/Enemigos/purple_guy.gd" id="1_kerfg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kerfg"]
+atlas = ExtResource("1_22bmm")
+region = Rect2(4, 0, 41, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26e1x"]
+atlas = ExtResource("1_22bmm")
+region = Rect2(4, 26, 41, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf5jo"]
+atlas = ExtResource("1_22bmm")
+region = Rect2(4, 52, 41, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28flm"]
+atlas = ExtResource("1_22bmm")
+region = Rect2(4, 78, 41, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xv84"]
+atlas = ExtResource("1_22bmm")
+region = Rect2(4, 104, 41, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tshc"]
+atlas = ExtResource("1_22bmm")
+region = Rect2(4, 130, 41, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki0ko"]
+atlas = ExtResource("1_22bmm")
+region = Rect2(4, 156, 41, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krmp5"]
+atlas = ExtResource("1_22bmm")
+region = Rect2(4, 182, 41, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0yqnl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kerfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26e1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf5jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28flm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xv84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tshc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ki0ko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krmp5")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hdkt6"]
+radius = 7.0
+height = 22.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkbeu"]
+size = Vector2(14, 22)
+
+[node name="Purple_Guy" type="CharacterBody2D" unique_id=1382131634 node_paths=PackedStringArray("raycast_caida_derecha", "raycast_pared_izquierda", "raycast_pared_derecha", "area", "raycast_caida_izquierda", "animacion")]
+collision_layer = 8
+script = ExtResource("1_kerfg")
+raycast_caida_derecha = NodePath("raycast_suelo_derecha")
+raycast_pared_izquierda = NodePath("raycast_pared_izquierda")
+raycast_pared_derecha = NodePath("raycasr_pared_derecha")
+area = NodePath("Area2D")
+raycast_caida_izquierda = NodePath("raycas_suelo_izquierda")
+animacion = NodePath("animacion")
+
+[node name="animacion" type="AnimatedSprite2D" parent="." unique_id=877548014]
+position = Vector2(0, -2)
+sprite_frames = SubResource("SpriteFrames_0yqnl")
+animation = &"walk"
+frame_progress = 0.66559786
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1998765346]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=341119395]
+shape = SubResource("CapsuleShape2D_hdkt6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1132120726]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_kkbeu")
+
+[node name="raycast_pared_izquierda" type="RayCast2D" parent="." unique_id=1895061028]
+target_position = Vector2(-14, 0)
+
+[node name="raycast_suelo_derecha" type="RayCast2D" parent="." unique_id=1766449053]
+position = Vector2(14, 0)
+target_position = Vector2(0, 18)
+
+[node name="raycas_suelo_izquierda" type="RayCast2D" parent="." unique_id=1670708659]
+position = Vector2(-13, 0)
+target_position = Vector2(0, 18)
+
+[node name="raycasr_pared_derecha" type="RayCast2D" parent="." unique_id=1723988870]
+target_position = Vector2(14, 0)
