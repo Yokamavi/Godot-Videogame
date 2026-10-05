@@ -1,0 +1,84 @@
+[gd_scene format=4 uid="uid://wwpkdtks3j7o"]
+
+[ext_resource type="PackedScene" uid="uid://lkfvlaydbaua" path="res://Escenas/Borders/bordes.tscn" id="1_yw1ao"]
+[ext_resource type="PackedScene" uid="uid://bcr6bej8g87pu" path="res://Escenas/contenedor_monedas/contenedor_monedas.tscn" id="2_tj5dq"]
+[ext_resource type="PackedScene" uid="uid://00vmvcr28xxg" path="res://Escenas/Personaje/personaje.tscn" id="3_ghkgf"]
+[ext_resource type="PackedScene" uid="uid://cxa3k1ka0uu6x" path="res://Escenas/moneda/moneda.tscn" id="3_navd5"]
+[ext_resource type="TileSet" uid="uid://dtw7gkj7tvwno" path="res://tile_sets/mazmorra.tres" id="4_navd5"]
+[ext_resource type="PackedScene" uid="uid://d204p12tu8vgf" path="res://Escenas/Fireball/fireball.tscn" id="5_tj5dq"]
+[ext_resource type="PackedScene" uid="uid://b1bhwnpqxcmp8" path="res://Escenas/Bala_bill/bala_bill.tscn" id="7_navd5"]
+
+[sub_resource type="Animation" id="Animation_tj5dq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(270, 94)]
+}
+
+[sub_resource type="Animation" id="Animation_ghkgf"]
+resource_name = "volar"
+length = 7.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(270, 94), Vector2(-270, 94)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_navd5"]
+_data = {
+&"RESET": SubResource("Animation_tj5dq"),
+&"volar": SubResource("Animation_ghkgf")
+}
+
+[node name="nivel_3" type="Node2D" unique_id=1217389831]
+
+[node name="Bordes" parent="." unique_id=1221269482 instance=ExtResource("1_yw1ao")]
+
+[node name="contenedorMonedas" parent="." unique_id=1218844537 instance=ExtResource("2_tj5dq")]
+
+[node name="moneda" parent="contenedorMonedas" unique_id=1009964220 instance=ExtResource("3_navd5")]
+
+[node name="moneda2" parent="contenedorMonedas" unique_id=1794144398 instance=ExtResource("3_navd5")]
+position = Vector2(61, 49)
+
+[node name="moneda3" parent="contenedorMonedas" unique_id=845885076 instance=ExtResource("3_navd5")]
+position = Vector2(-56, 47)
+
+[node name="moneda4" parent="contenedorMonedas" unique_id=1384951594 instance=ExtResource("3_navd5")]
+position = Vector2(-132, 98)
+
+[node name="moneda5" parent="contenedorMonedas" unique_id=1767547934 instance=ExtResource("3_navd5")]
+position = Vector2(195, 97)
+
+[node name="Personaje" parent="." unique_id=784702786 instance=ExtResource("3_ghkgf")]
+position = Vector2(-194, 99)
+
+[node name="Nivel" type="TileMapLayer" parent="." unique_id=621944519]
+tile_map_data = PackedByteArray("AADz/wQAAAAAAAAAAAD0/wQAAAAAAAAAAAD1/wQAAAAAAAAAAAAMAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAD2/wQAAAAAAAAAAAD3/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAA=")
+tile_set = ExtResource("4_navd5")
+
+[node name="fireball" parent="." unique_id=247386416 node_paths=PackedStringArray("animationPlayer") instance=ExtResource("5_tj5dq")]
+position = Vector2(270, 94)
+animationPlayer = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fireball" unique_id=1168165333]
+libraries/ = SubResource("AnimationLibrary_navd5")
+
+[node name="Bala_Bill" parent="." unique_id=2033031927 instance=ExtResource("7_navd5")]
+position = Vector2(264, 41)

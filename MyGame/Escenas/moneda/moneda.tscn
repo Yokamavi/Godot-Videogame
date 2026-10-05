@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cxa3k1ka0uu6x"]
+
+[ext_resource type="Script" uid="uid://bs6uti8cdy43y" path="res://Escenas/moneda/moneda.gd" id="1_rqm1n"]
+[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://sprites/mago/tileset/tileset_mazmorra.png" id="2_w6rqb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yqnl"]
+atlas = ExtResource("2_w6rqb")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0yqnl"]
+radius = 7.0
+
+[node name="moneda" type="Node2D" unique_id=1009964220 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("1_rqm1n")
+area_2d = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=934655039]
+texture = SubResource("AtlasTexture_0yqnl")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1147886788]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2132413489]
+shape = SubResource("CircleShape2D_0yqnl")

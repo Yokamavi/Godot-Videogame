@@ -1,0 +1,50 @@
+[gd_scene format=4 uid="uid://bg1phcq2elwyq"]
+
+[ext_resource type="PackedScene" uid="uid://lkfvlaydbaua" path="res://Escenas/Borders/bordes.tscn" id="1_koeil"]
+[ext_resource type="PackedScene" uid="uid://00vmvcr28xxg" path="res://Escenas/Personaje/personaje.tscn" id="2_jj245"]
+[ext_resource type="PackedScene" uid="uid://bcr6bej8g87pu" path="res://Escenas/contenedor_monedas/contenedor_monedas.tscn" id="3_yy4ar"]
+[ext_resource type="PackedScene" uid="uid://cxa3k1ka0uu6x" path="res://Escenas/moneda/moneda.tscn" id="4_jj245"]
+[ext_resource type="TileSet" uid="uid://dtw7gkj7tvwno" path="res://tile_sets/mazmorra.tres" id="4_kr2x0"]
+[ext_resource type="PackedScene" uid="uid://pgbuckty3rjf" path="res://Escenas/Enemigos/samurai.tscn" id="6_yy4ar"]
+[ext_resource type="PackedScene" uid="uid://8nhw3kykcqgw" path="res://Escenas/Trampa/trampa.tscn" id="7_kr2x0"]
+
+[node name="Nivel2" type="Node2D" unique_id=1784331732]
+
+[node name="Bordes" parent="." unique_id=1221269482 instance=ExtResource("1_koeil")]
+
+[node name="Personaje" parent="." unique_id=784702786 instance=ExtResource("2_jj245")]
+position = Vector2(-184, 78)
+
+[node name="contenedorMonedas" parent="." unique_id=1218844537 instance=ExtResource("3_yy4ar")]
+
+[node name="moneda" parent="contenedorMonedas" unique_id=1009964220 instance=ExtResource("4_jj245")]
+position = Vector2(-159, -11)
+
+[node name="moneda2" parent="contenedorMonedas" unique_id=1418875187 instance=ExtResource("4_jj245")]
+position = Vector2(-137, -76)
+
+[node name="moneda3" parent="contenedorMonedas" unique_id=1429481315 instance=ExtResource("4_jj245")]
+position = Vector2(129, -63)
+
+[node name="moneda4" parent="contenedorMonedas" unique_id=1350769096 instance=ExtResource("4_jj245")]
+position = Vector2(-8, -8)
+
+[node name="moneda5" parent="contenedorMonedas" unique_id=427343599 instance=ExtResource("4_jj245")]
+position = Vector2(-9, 88)
+
+[node name="Fondo" type="TileMapLayer" parent="." unique_id=598548999]
+tile_map_data = PackedByteArray("AAAGAPn/AAACAAMAAAAGAPr/AAACAAMAAAAGAPv/AAACAAMAAAAGAPz/AAACAAMAAAAJAPn/AAACAAMAAAAJAPr/AAACAAMAAAAJAPv/AAACAAMAAAAJAPz/AAACAAMAAAA=")
+tile_set = ExtResource("4_kr2x0")
+
+[node name="Nivel" type="TileMapLayer" parent="." unique_id=1337790294]
+tile_map_data = PackedByteArray("AADz/wMAAAAAAAAAAAD0/wMAAAAAAAAAAAD1/wMAAAAAAAAAAAD2/wMAAAAAAAAAAAD3/wMAAAAAAAAAAAD4/wMAAAAAAAAAAADz/wIAAAAAAAAAAAD0/wIAAAAAAAAAAAD1/wIAAAAAAAAAAAD2/wIAAAAAAAAAAAD3/wIAAAAAAAAAAAD4/wIAAAAAAAAAAAD8/wYAAAAAAAAAAAD9/wYAAAAAAAAAAAD8/wUAAAAAAAAAAAD9/wUAAAAAAAAAAAD9/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD8/wMAAAAAAAAAAAD9/wMAAAAAAAAAAAD9/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAD8/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wAAAAAAAAAAAAD8/wAAAAAAAAAAAAD9////AAAAAAAAAAD8////AAAAAAAAAAD8//7/AAAAAAAAAAD9//7/AAAAAAAAAAD9//3/AAAAAAAAAAD8//3/AAAAAAAAAAD8//z/AAAAAAAAAAD9//z/AAAAAAAAAAD1/wAAAAACAAAAAAD2/wAAAAACAAAAAADz/wEAAAADAAEAAAD0/wEAAAADAAEAAAD1/wEAAAADAAEAAAD2/wEAAAADAAEAAAD3/wEAAAADAAEAAAD4/wEAAAADAAEAAAD0/wAAAAACAAAAAAD3/wAAAAACAAAAAAD0//z/AAACAAAAAAD1//z/AAACAAAAAAD2//z/AAACAAAAAAD3//z/AAACAAAAAAD+//z/AAAAAAAAAAD///z/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAP3/AAAAAAAAAAAGAP3/AAACAAAAAAAHAP3/AAACAAAAAAAIAP3/AAACAAAAAAAJAP3/AAACAAAAAAAKAAAAAAACAAAAAAALAAAAAAACAAAAAAAMAAAAAAACAAAAAAAKAAMAAAACAAAAAAALAAMAAAACAAAAAAAMAAMAAAACAAAAAAAMAAYAAAACAAEAAAALAAYAAAACAAEAAAAKAAYAAAACAAEAAAAJAAYAAAACAAEAAAAIAAYAAAACAAEAAAD+/wAAAAABAAAAAAD//wAAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAD+/wEAAAAAAAIAAAD//wEAAAAAAAIAAAAAAAEAAAAAAAIAAAABAAEAAAAAAAIAAAACAAEAAAAAAAIAAAADAAEAAAAAAAIAAAA=")
+tile_set = ExtResource("4_kr2x0")
+
+[node name="Enemigo" parent="." unique_id=13847959 instance=ExtResource("6_yy4ar")]
+position = Vector2(75, 83)
+
+[node name="Trampa" parent="." unique_id=1268922539 instance=ExtResource("7_kr2x0")]
+position = Vector2(-24, -40)
+
+[node name="Trampa2" parent="." unique_id=560085186 instance=ExtResource("7_kr2x0")]
+position = Vector2(-8, -40)
